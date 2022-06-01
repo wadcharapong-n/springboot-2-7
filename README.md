@@ -8,3 +8,5 @@ poc spring boot 2.7.0. with java 17
 - authentication API Example
 - connection mySQL
 - spring security
+- unit test service (service layer)
+- unit test WebMvc (controller layer)
