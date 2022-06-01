@@ -1,7 +1,6 @@
 package com.north.poc.controller;
 
 import com.north.poc.dto.UserDto;
-import com.north.poc.model.User;
 import com.north.poc.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.Authentication;
@@ -12,11 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @AllArgsConstructor
+@RequestMapping("/user")
 public class UserController {
-
     final UserService userService;
-
-    @GetMapping("/user")
+    @GetMapping
     public UserDto getUserByToken(){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         Long userId = (Long) authentication.getPrincipal();
